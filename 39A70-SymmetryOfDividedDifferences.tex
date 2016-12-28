@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetryOfDividedDifferences}
+\pmcreated{2013-03-22 16:48:29}
+\pmmodified{2013-03-22 16:48:29}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{symmetry of divided differences}
+\pmrecord{22}{39042}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+If $y_0, \ldots, y_n$ is a permutation of $x_0, \ldots, x_n$, then
+\[
+\Delta^n f [x_0, \ldots, x_n] = \Delta^n f [y_0, \ldots, y_n].
+\]
+\end{thm}
+
+\begin{proof}
+We proceed by induction.  When $n=1$, we have, from the definition,
+\[
+\Delta^1 f [x_0, x_1] =
+{f(x_1) - f(x_0) \over x_1 - x_0} =
+{f(x_0) - f(x_1) \over x_0 - x_1} =
+\Delta^1 f [x_1, x_0].
+\]
+Since the only permutations of two elements are the identity and the
+transposition, we see that the first divided differrence is symmetric.
+
+Now suppose that we already know that the $n$-th divided difference
+is symmetric under permutation of its arguments for some $n \ge 1$.
+We will prove that the $n+1$-st divided difference is also symmmetric
+under all permutations of its arguments.
+
+The divided difference is symmetric under transposing $x_0$ with
+$x_1$:
+\begin{align*}
+\Delta^{n+1} f [x_0, x_1, x_2, \ldots, x_{n+1}] &=
+{\Delta^n f [x_1, x_2, \ldots x_{n+1}] -
+ \Delta^n f [x_0, x_2, \ldots x_{n+1}]
+ \over x_1 - x_0} \\ &=
+{\Delta^n f [x_0, x_2, \ldots x_{n+1}] -
+ \Delta^n f [x_1, x_2, \ldots x_{n+1}]
+ \over x_0 - x_1} \\ &=
+\Delta^{n+1} f [x_1, x_0, x_2, \ldots, x_{n+1}]
+\end{align*}
+
+The divided difference is symmetric under transposing $x_1$ with
+$x_2$:
+\begin{align*}
+\Delta^{n+1} &f [x_0, x_1, x_2, \ldots, x_{n+1}] \\
+&=
+{\Delta^n f [x_1, x_2, \ldots x_{n+1}] -
+ \Delta^n f [x_0, x_2, \ldots x_{n+1}]
+ \over x_1 - x_0} \\ &=
+ {\begin{matrix}
+   (x_2 - x_0) \left( \Delta^{n-1} f [x_2, x_3 \ldots x_{n+1}] -
+     \Delta^{n-1} f [x_1, x_3 \ldots x_{n+1}] \right) \\ -
+   (x_2 - x_1) \left( \Delta^{n-1} f [x_2, x_3 \ldots x_{n+1}] -
+    \Delta^{n-1} f [x_0, x_3 \ldots x_{n+1}] \right)
+  \end{matrix}
+ \over (x_2 - x_1) (x_1 - x_0) (x_2 - x_0)} \\ &=
+ {\begin{matrix}
+   (x_1 - x_0) \Delta^{n-1} f [x_2, x_3 \ldots x_{n+1}] &-&
+   (x_2 - x_0) \Delta^{n-1} f [x_1, x_3 \ldots x_{n+1}] \\ &+&
+   (x_2 - x_1) \Delta^{n-1} f [x_0, x_3 \ldots x_{n+1}]
+  \end{matrix}
+ \over (x_2 - x_1) (x_1 - x_0) (x_2 - x_0)} \\ &= 
+ {\begin{matrix}
+   (x_1 - x_0) \left( \Delta^{n-1} f [x_1, x_3 \ldots x_{n+1}] -
+     \Delta^{n-1} f [x_2, x_3 \ldots x_{n+1}] \right) \\ -
+   (x_1 - x_2) \left( \Delta^{n-1} f [x_1, x_3 \ldots x_{n+1}] -
+    \Delta^{n-1} f [x_0, x_3 \ldots x_{n+1}] \right)
+  \end{matrix}
+ \over (x_1 - x_2) (x_1 - x_0) (x_2 - x_0)} \\ &=
+{\Delta^n f [x_2, x_1, \ldots x_{n+1}] -
+ \Delta^n f [x_0, x_1, \ldots x_{n+1}]
+ \over x_1 - x_0} \\ &=
+\Delta^{n+1} f [x_0, x_2, x_1, \ldots, x_{n+1}]
+\end{align*}
+
+The divided difference is symmetric under transposing
+$x_k$ with $x_{k+1}$ when $k > 1$:
+\begin{align*} 
+\Delta^{n+1} &f [x_0, x_1, x_2, \ldots, x_k, x_{k+1}, \ldots, x_{n+1}] \\ &=
+{\Delta^n f [x_1, x_2, \ldots, x_k, x_{k+1}, \ldots, x_{n+1}] -
+ \Delta^n f [x_0, x_2, \ldots, x_k, x_{k+1}, \ldots, x_{n+1}] 
+ \over x_1 - x_0} \\ &=
+{\Delta^n f [x_1, x_2, \ldots, x_{k+1}, x_k, \ldots, x_{n+1}] -
+ \Delta^n f [x_0, x_2, \ldots, x_{k+1}, x_k, \ldots, x_{n+1}] 
+ \over x_1 - x_0} \\ &=
+\Delta^{n+1} f [x_0, x_1, x_2, \ldots, x_{k+1}, x_k, \ldots, x_{n+1}]
+\end{align*}
+
+Since any permutation of $x_0, x_1, \ldots x_{n+1}$ can be 
+genreated from the transpositions of $x_k$ with $x_{k+1}$ 
+for $k$ between $0$ and $n$, it follows that
+$\Delta^{n+1} f [x_0, x_1, \ldots, x_k, x_{k+1}, \ldots, x_{n+1}]$
+is symmetric under all permutaions of $x_0, x_1, \ldots x_{n+1}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

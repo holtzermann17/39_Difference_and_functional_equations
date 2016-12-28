@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DividedDifferenceInterpolationFormula}
+\pmcreated{2013-03-22 16:19:13}
+\pmmodified{2013-03-22 16:19:13}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{divided difference interpolation formula}
+\pmrecord{8}{38447}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Newton's \emph{divided difference interpolation formula} is the analogue 
+of the Gregory-Newton and Taylor series for divided differences.
+
+If $f$ is a real function and $x_0, x_1, \ldots$ is a sequence of distinct
+real numbers, then we have, for any integer $n > 0$,
+ \[ f (x) = f(x_0) + (x - x_0) \Delta f (x_0, x_1) + \cdots +
+ (x - x_0) \cdots (x - x_{n-1}) \Delta^n f (x_0, \ldots x_n) + R\]
+where the remainder can be expressed either as
+ \[R = (x - x_0) \cdots (x - x_n) \Delta^{n+1} f (x, x_1, \ldots, x_n)\]
+or as
+ \[R = {1 \over (n+1)!} (x - x_0) \cdots (x - x_n) f^{(n+1)} (\eta)\]
+where $\eta$ lies between the smallest and the largest of $x, x_0, 
+\ldots, x_n$.
+
+\textbf{Remark}.  If $f$ is a polynomial of degree $n$, then $R$ vanishes.
+%%%%%
+%%%%%
+\end{document}

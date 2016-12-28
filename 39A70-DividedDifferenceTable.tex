@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DividedDifferenceTable}
+\pmcreated{2013-03-22 16:48:33}
+\pmmodified{2013-03-22 16:48:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{divided difference table}
+\pmrecord{15}{39043}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In numerical work involving divided differences, when
+computing the divided differences of a tabulated
+function, it is convenient to arrange the divided
+differences of a function $f$ in a table like so:
+\[
+\begin{matrix}
+x_0 & f(x_0) &&& \\
+&& \Delta^1 f[x_0, x_1] && \\
+x_1 & f(x_1) && \Delta^2 f[x_0, x_1, x_2] & \\
+&& \Delta^1 f[x_1, x_2] && \Delta^3 [x_0, x_1, x_2. x_3] \\
+x_2 & f(x_2) && \Delta^2 f[x_1, x_2, x_3] &  \vdots & \ddots \\
+&& \Delta^1 f[x_2, x_3] & \vdots & \\
+x_3 & f(x_3) & \vdots && \\
+\vdots & \vdots &&&
+\end{matrix}
+\]
+
+The arrangement of this table makes it easy to compute
+the divided differences.  Also, once such a table has
+been computed, one can read off the coefficients in the
+divided difference interpolation formula as the top 
+entries in the various columns.
+
+To explain the computation, as well as to program it on a
+computer, it is convenient to label the locations in our
+table with pairs of integers like so:
+\[
+\begin{matrix}
+* & (0, 0) &&&& \\
+* &        & (0, 1) &&& \\
+* & (1, 1) &        & (0,2) && \\
+* &        & (1, 2) &       & (0, 3) & \\
+* & (2, 2) &        & (1,3) & \vdots & \ddots \\
+* &        & (2, 3) & \vdots && \\
+* & (3, 3) & \vdots &&& \\
+\vdots & \vdots &&&&
+\end{matrix}
+\]
+For convenience, introduce the notation $\Delta_{ij}$ to
+denote the entry of the difference table at location $(i, j)$.
+Then, because of the recursion
+\[
+\Delta^{n+1} f [x_0, x_1,\ldots, x_{n+1}] = {\Delta^n f [x_1, x_2, \ldots ,x_{n+1}] - \Delta^n f [x_0, x_1 ,\ldots, x_{n}] \over x_{n+1} - x_0},
+\]
+we have
+\begin{align*}
+\Delta_{jj} &= f(x_j) \\
+\Delta_{ij} &= {\Delta_{i-1\,j} - \Delta_{i\,j-1} \over x_j - x_i}.
+\end{align*}
+
+Using these formulae, we may systematically compute the divided 
+difference table as follows:  The first and second column are
+just the tabulation of our function, so we may write them
+down immediately.  Then we fill out the table one column at a 
+time by using the formula.
+
+Let us illustrate with a simple example.  Consider the following
+choices for $f$ and $x_1$:
+\begin{align*}
+f(x) &= x^2 - 4 x + 1 \\
+x_0 &= 2 \\
+x_1 &= 3 \\
+x_2 &= 5 
+\end{align*}
+We may write down our first two columns:
+\[
+\begin{matrix}
+2 & -3 \\ \\
+3 & -2 \\ \\
+5 & 6
+\end{matrix}
+\]
+Now, we start filling in the next column, starting with $\Delta_{0\,1}$.
+We take the difference of $-2$ and $-3$ and divide it by $x_1 - x_0$.  Since
+\[
+{(-2) - (-3) \over 3 - 2} = {1 \over 1} = 1,
+\]
+we have
+\[
+\begin{matrix}
+2 & -3  &\\ 
+  &     & 1\\
+3 & -2  & \\
+  &     & \\
+5 &  6  &
+\end{matrix} \qquad.
+\]
+Next we fill in the entry $\Delta_{1\,2}$.  We take the difference of
+$6$ and $-2$ and divide it by $x_2 - x_1$.  Since
+\[
+{6 - (-2) \over 5 - 3} = {8 \over 2} = 4,
+\]
+we have
+\[
+\begin{matrix}
+2 & -3  &\\ 
+  &     & 1 \\
+3 & -2  & \\
+  &     & 4 \\
+5 &  6  &
+\end{matrix} \qquad.
+\]
+Finally, we fill in the entry $\Delta_{0\,2}$.  We take the difference of
+$4$ and $1$ and divide it by $x_2 - x_0$.  Since
+\[
+{4 - 1 \over 5 - 2} = {3 \over 3} = 1,
+\]
+we have
+\[
+\begin{matrix}
+2 & -3  &   & \\ 
+  &     & 1 & \\
+3 & -2  &   & 1 \\
+  &     & 4 &\\
+5 &  6  &   &
+\end{matrix} \qquad.
+\]
+Thus, we have constructed our difference table.
+The top entries in the columns are $-3, 1, 1$ so,
+as per our earlier remark, the divided difference
+interpolation formula reads
+\begin{align*}
+f(x) &= -3 + (x - 2) + (x - 2) (x - 3) \\
+&= 1 - 4 x + x^2.
+\end{align*}
+Since $f$ is a second order polynomial, this interpolation
+to second order is exact.  There is no remainder and, upon
+simplifying the expression, we recover our original polynomial.
+
+%%%%%
+%%%%%
+\end{document}

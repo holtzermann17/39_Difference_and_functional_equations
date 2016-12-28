@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndefiniteSum}
+\pmcreated{2013-03-22 17:35:14}
+\pmmodified{2013-03-22 17:35:14}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{indefinite sum}
+\pmrecord{20}{39999}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A99}
+\pmrelated{FiniteDifference}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that the finite difference operator $\Delta$ defined on the set of functions $\mathbb{R}\to \mathbb{R}$ is given by $$\Delta f(x):= f(x+1)-f(x).$$
+The difference operator can be thought of as the discrete version of the derivative operator sending a function to its derivative (if it exists).  With the derivative operation, there corresponds an inverse operation called the antiderivative, which, given a function $f$, finds its antiderivative $F$ so that the derivative of $F$ gives $f$.  There is also a discrete analog of this inverse operation, and it is called the \emph{indefinite sum}.
+
+The \emph{indefinite sum} of a function $f:\mathbb{R}\to \mathbb{R}$ is the set of functions $$\lbrace F:\mathbb{R}\to \mathbb{R}\mid \Delta F = f \rbrace.$$
+This set is often denoted by $\Delta^{-1}f$ or $\Sigma f$, and any element in $\Delta^{-1}f$ is called an indefinite sum of $f$.
+
+\textbf{Remark}.  Like the indefinite integral, the indefinite sum $\Delta^{-1}$ is shift invariant.  This means that for any $F\in \Delta^{-1} f$, then $F+c \in \Delta^{-1} f$ for any $c\in \mathbb{R}$.  But, unlike the indefinite integral, the indefinite sum is also invariant by a shift of a periodic real function of period $1$.  Conversely, the difference of two indefinite sums of a function $f$ is a periodic real function of period $1$.
+
+In the following discussion, we consider the indefinite sum of a function as a function.
+
+\textbf{Basic Properties}
+\begin{enumerate}
+\item $\Delta \Delta^{-1}f =f$, and $\Delta^{-1} \Delta f=f$ modulo a real function of period $1$.
+\item Modulo a real number, and treating $\Delta^{-1}$ as an operator taking a function into a function, we see that $\Delta^{-1}$ is linear, that is, 
+\begin{itemize}
+\item $\Delta^{-1} (rf) = r\Delta^{-1} f$ for any $r\in \mathbb{R}$, and 
+\item $\Delta^{-1}(f+g)=\Delta^{-1}f +\Delta^{-1}g$.
+\end{itemize}
+\item If $F(x)=\Delta^{-1}f(x)$, then $F(x+a)=\Delta^{-1}f(x+a)$.
+\item If $F=\Delta^{-1}f$, then we see that 
+\begin{eqnarray*}
+F(a+1)-F(a) &=& f(a), \\ F(a+2)-F(a+1)&=& f(a+1), \\ &\vdots& \\ F(x)-F(x-1)&=& f(x-1).  
+\end{eqnarray*}
+where $x-a$ is a positive integer.  Summing these expressions, we get $$F(x)-F(a)=\sum_{i=1}^{x-a} f(a+i-1).$$  This is the discrete version of the fundamental theorem of calculus.
+\end{enumerate}
+
+Below is a table of some basic functions and their indefinite sums ($C$ is a real-valued periodic function with period $1$):
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $\Delta^{-1}f(x)$ & Comment \\
+\hline\hline
+$r\in \mathbb{R}$ & $rx+C$ & \\
+\hline
+$x$ & $\displaystyle{\frac{x(x-1)}{2}+C}$ & \\
+\hline
+$x^2$ & $\displaystyle{\frac{x(x-1)(2x-1)}{6}+C}$ & \\
+\hline
+$x^3$ & $\displaystyle{\frac{x^2(x-1)^2}{4}+C}$ & \\
+\hline
+$x^n$ & $T_n(x)+C$ & See this \PMlinkname{link}{SumOfPowers} for detail \\
+\hline
+$a^x$ & $\displaystyle{\frac{a^x}{a-1}+C}$ & $a\ne 1$ \\
+\hline
+$(x)_n$ & $\displaystyle{\frac{(x)_n}{n+1}+C}$ & $(x)_n$ is the falling factorial of degree $n$ \\
+\hline
+$\displaystyle{\binom{x}{n}}$ & $\displaystyle{\binom{x}{n+1}+C}$ & $\displaystyle{\binom{x}{n}:=\frac{(x)_n}{n!}}$ \\
+\hline
+$\displaystyle{\frac{1}{x}}$ & $\psi(x)+C$ & $\psi(x)$ is the digamma function \\
+\hline
+$\ln{x}$ & $\ln{\Gamma(x)}+C$ & $\Gamma(x)$ is the gamma function \\
+\hline
+$\sin{x}$ & $\displaystyle{-\frac{\cos(x-1/2)}{2\sin(1/2)}+C}$ & \\
+\hline
+$\cos{x}$ & $\displaystyle{\frac{\sin(x-1/2)}{2\sin(1/2)}+C}$ & \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{cj} C. Jordan. \emph{Calculus of Finite Differences}, third edition. Chelsea, New York (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

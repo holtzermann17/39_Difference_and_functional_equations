@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExplicitFormulaForDividedDifferences}
+\pmcreated{2013-03-22 14:41:16}
+\pmmodified{2013-03-22 14:41:16}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{explicit formula for divided differences}
+\pmrecord{21}{36295}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+The $n$-th divided difference of a function $f$ can be written explicitly as
+\[
+\Delta^n f [x_0, \ldots , x_n] = 
+\sum_{i=0}^n 
+{f(x_i) \over \prod\limits_{0 \le j \le n \atop j \ne i} (x_i - x_j)}
+\]
+\end{thm}
+
+\begin{proof}
+We will proceed by recursion on $n$.  When $n=1$, the formula to be proven
+reduces to
+\[
+\Delta^1 f [x_0, x_1] =
+{f(x_0) \over x_0 - x_1} +
+{f(x_1) \over x_1 - x_0},
+\]
+which agrees with the definition of $\Delta^1 f$.
+
+To prove that this \PMlinkescapetext{formula} is correct when $n > 1$, one needs to check that it \PMlinkescapetext{satisfies} the recurrence relation for divided differences.
+\begin{align*}
+\sum_{0 \le i \le n+1 \atop i \neq 0} 
+{f(x_i) \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 0}} (x_i - x_j)} &-
+\sum_{0 \le i \le n+1 \atop i \neq 1} 
+{f(x_i) \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 1}} (x_i - x_j)} \\ &=
+{f(x_1) \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 0}} (x_1 - x_j)} -
+{f(x_0) \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 1}} (x_0 - x_j)} + \\
+&\qquad \sum_{2 \le i \le n+1} f(x_i) \left(
+{1 \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 0}} (x_i - x_j)} -
+{1 \over \prod\limits_{0 \le j \le n+1 \atop 
+  {j \ne i \atop j \neq 1}} (x_i - x_j)} \right) \\ &=
+-{(x_0 - x_1) f(x_0) \over \prod\limits_{0 \le j \le n+1 
+  \atop j \ne i} (x_0 - x_j)} +
+{(x_1 - x_0) f(x_1) \over \prod\limits_{0 \le j \le n+1 
+  \atop j \ne i} (x_1 - x_j)} + \\
+&\qquad \sum_{2 \le i \le n+1} f(x_i) \left(
+{x_i - x_0 \over \prod\limits_{0 \le j \le n+1 \atop 
+  j \ne i} (x_i - x_j)} -
+{x_i - x_1 \over \prod\limits_{0 \le j \le n+1 \atop 
+  j \ne i} (x_i - x_j)} \right) \\ &=
+{(x_1 - x_0) f(x_0) \over \prod\limits_{0 \le j \le n+1 
+  \atop j \ne i} (x_0 - x_j)} +
+{(x_1 - x_0) f(x_1) \over \prod\limits_{0 \le j \le n+1 
+  \atop j \ne i} (x_1 - x_j)} +
+(x_1 - x_0) \sum_{2 \le i \le n+1}
+{(x_1 - x_0) f(x_i) \over \prod\limits_{0 \le j \le n+1 \atop 
+  j \ne i} (x_i - x_j)} \\ &=
+(x_1 - x_0) \sum_{0 \le i \le n+1}
+{f(x_i) \over \prod\limits_{0 \le j \le n+1 \atop 
+  j \ne i} (x_i - x_j)}
+\end{align*}
+Thus, we see that, if
+\[
+\Delta^n f [x_0, \ldots , x_n] = 
+\sum_{i=0}^n 
+{f(x_i) \over \prod\limits_{0 \le j \le n \atop j \ne i} (x_i - x_j)},
+\]
+then
+\[
+\Delta^{n+1} f [x_0, \ldots , x_{n+1}] = 
+\sum_{i=0}^{n+1} 
+{f(x_i) \over \prod\limits_{0 \le j \le n+1 \atop j \ne i} (x_i - x_j)}.
+\]
+Hence, by induction, the formula holds for all $n$.
+\end{proof}
+
+This formula may be phrased another way by introducing the polynomials $p_n$ defined as
+\[
+p_n (x) = \prod_{i = 0}^n (x - x_i).
+\]
+We may write
+\[
+\Delta^n f [x_0, \ldots ,x_n] = \sum_{i=0}^n {f(x_i) \over p'(x_i)}.
+\]
+
+Either form of the explicit formula makes it obvious that divided differences 
+are symmetric functions of $x_0, x_1, \ldots$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DividedDifference}
+\pmcreated{2013-03-22 14:40:59}
+\pmmodified{2013-03-22 14:40:59}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{divided difference}
+\pmrecord{10}{36288}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f$ be a real (or complex) function.  Given distinct real (or complex) numbers $x_0, x_1, x_2, \ldots$, the \emph{divided differences} of $f$ are defined recursively as follows:
+\begin{align*}
+\Delta^1 f [x_0, x_1] &= {f(x_1) - f(x_0) \over x_1 - x_0} \\
+\Delta^{n+1} f [x_0, x_1,\ldots, x_{n+1}] &= {\Delta^n f [x_1, x_2, \ldots ,x_{n+1}] - \Delta^n f [x_0, x_2 ,\ldots, x_{n+1}] \over x_1 - x_0}
+\end{align*}
+It is also convenient to define the zeroth divided difference of
+$f$ to be $f$ itself:
+\[
+\Delta^0 f [x_0] = f[x_0]
+\]
+
+Some important properties of divided differences are:
+
+\begin{enumerate}
+\item  Divided differences are invariant under permutations of $x_0, x_1, x_2, \ldots$
+\item  If $f$ is a polynomial of order $m$ and $m < n$, then the $n$-th divided differences of $f$ vanish identically
+\item  If $f$ is a polynomial of order $m+n$, then $\Delta^n (x,x_1, \ldots ,x_n)$ is a polynomial in $x$ of order $m$.
+\end{enumerate}
+
+Divided differences are useful for interpolating functions when the values are given for unequally spaced values of the argument.
+
+Becuse of the first property listed above, it does not matter with 
+respect to which two arguments we compute the divided difference
+when we compute the $n+1$-st divided difference from the $n$-th 
+divided difference.  For instance, when computing the divided 
+difference table for tabulated values of a function, a convenient
+choice is the following:
+\[
+\Delta^{n+1} f [x_0, x_1,\ldots, x_{n+1}] = {\Delta^n f [x_1, x_2, \ldots ,x_{n+1}] - \Delta^n f [x_0, x_1 ,\ldots, x_{n}] \over x_{n+1} - x_0}
+\]
+%%%%%
+%%%%%
+\end{document}

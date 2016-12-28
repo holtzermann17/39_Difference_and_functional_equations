@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolutionOfEquationsByDividedDifferenceInterpolaton}
+\pmcreated{2013-03-22 16:49:22}
+\pmmodified{2013-03-22 16:49:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{solution of equations by divided difference interpolaton}
+\pmrecord{16}{39061}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Divided diference interpolation can be used to obtain approximate
+solutions to equations and to invert functions numerically.  The 
+idea is that, given an equation $f(y) = x$ which we want to solve
+for $y$, we first take several numbers $y_1, \ldots, y_n$ and
+compute $x_1 \ldots x_n$ as $x_i = f(y_i)$.  Then we compute the
+divided differences of the $y_i$'s regarded as functions of the 
+$x_i$'s and form the divided difference series.  Substituting
+$x$ in this series provides an approximation to $y$.
+
+To illustrate how this works, we will examine the transcendental
+equation $x + e^{-x} = 2$.  We note that $2 + e^{-2} = 2.13533$
+and $1.5 + e^{-1.5} = 1.72313$, so there will be a solution
+between $1.5$ and $2$, likely closer to $2$ than $1.5$.  Therefore, 
+as our values of the $y_i$'s, we shall take $1.5$, $1.6$, $1.7$,
+$1.8$, $1.9$, $2.0$, $2.1$.  We now tabulate $x_i = y_i + e^{-y_i}$
+for those values:
+
+\begin{tabular}
+{| l | l |}
+$y_i$ & $x_i$ \\
+$1.5$ & $1.72313$ \\
+$1.6$ & $1.80190$ \\
+$1.7$ & $1.88268$ \\
+$1.8$ & $1.96530$ \\
+$1.9$ & $2.04957$ \\
+$2.0$ & $2.13533$ \\
+$2.1$ & $2.22246$
+\end{tabular}
+
+Next, we form a divided difference table of the $y_i$'s as a 
+function of the $x_i$'s:
+\[
+\begin{matrix}
+1.72313 & 1.50000 &         &          &         &           & & \\
+        &         & 1.26952 &          &         &           & & \\
+1.80190 & 1.60000 &         & -0.19799 &         &           & & \\
+        &         & 1.23793 &          & 0.12082 &           & & \\
+1.88268 & 1.70000 &         & -0.16873 &         & -0.039609 & & \\
+        &         & 1.21036 &          & 0.10789 &           & 0.091553 & \\
+1.96530 & 1.80000 &         & -0.14201 &         & -0.077347 & & -0.13457 \\
+        &         & 1.18666 &          & 0.08210 &           & 0.024360 & \\
+2.04957 & 1.90000 &         & -0.12127 &         & -0.067102 & & \\
+        &         & 1.16604 &          & 0.05930 &           & & \\
+2.13533 & 2.00000 &         & -0.10602 &         &           & & \\
+        &         & 1.14771 &          &         &           & & \\
+2.22246 & 2.10000 &         &          &         &           & &
+\end{matrix}
+\]
+From this table, we form the series
+\begin{align*}
+1.50000 &+ 1.26952 (x - 1.72313) - 0.19799 (x - 1.72313) (x - 1.80190) \\
+&+ 0.12082 (x - 1.72313) (x - 1.80190) (x - 1.88268) \\
+&- 0.039609 (x - 1.72313) (x - 1.80190) (x - 1.88268) (x - 1.96530) \\
+&+ 0.091553 (x - 1.72313) (x - 1.80190) (x - 1.88268) (x - 1.96530)
+(x - 2.04957) \\
+&- 0.13457 (x - 1.72313) (x - 1.80190) (x - 1.88268) (x - 1.96530)
+(x - 2.04957) (x - 2.13533)
+\end{align*}
+Substituting $2.00000$ for $x$, we obtain $1.84140$.  Given that
+\[
+1.84140 + e^{-1.84140} < 2 < 1.84141 + e^{-1.84141},
+\]
+this answer is correct to all $5$ decimal places.
+
+In the presentation above, we tacitly assumed that there was a
+solution to our equation and focussed our attention on finding 
+that answer numerically.  To complete the treatment we will 
+now show that there indeed exists a unique solution to the 
+equation $x + e^{-x} = 2$ in the interval $(0,\infty)$.
+
+Existence follows from the intermediate value theorem.  As
+noted above, 
+\[
+1.5 + e^{-1.5} < 2 < 3 + e^{-2}.
+\]
+Since $x + e^{-x}$ depends continuously on $x$, it follows 
+that there exists $x \in (1.5, 2)$ such that $x + e^{-x} = 2$.
+
+As for uniqueness, note that the derivative of $x + e^{-x}$
+is $1 - e^{-x}$.  When $x > 0$, we have $e^{-x} < 1$, or
+$1 - e^{-x} > 0$.  Hence, $x + e^{-x}$ is a strictly increaing
+function of $x$, so there can be at most one $x$ such that
+$x + e^{-x} = 2$.
+
+%%%%%
+%%%%%
+\end{document}

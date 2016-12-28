@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArithmeticgeometricharmonicMeansInequality}
+\pmcreated{2013-03-22 12:43:07}
+\pmmodified{2013-03-22 12:43:07}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of arithmetic-geometric-harmonic means inequality}
+\pmrecord{7}{33013}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39B62}
+\pmclassification{msc}{26D15}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{ProofOfArithmeticGeometricMeansInequalityUsingLagrangeMultipliers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\begin{document}
+We can use the Jensen inequality for an easy proof of the arithmetic-geometric-harmonic means inequality.
+
+Let $x_1,\ldots,x_n > 0$; we shall first prove that
+$$
+\sqrt[n]{x_1\cdot\ldots\cdot x_n} \le \frac{x_1+\ldots+x_n}{n}.
+$$
+
+Note that $\log$ is a concave function. Applying it to the
+arithmetic mean of $x_1,\ldots, x_n$ and using Jensen's inequality, we see that
+\begin{align*}
+\log(\frac{x_1+\ldots+x_n}{n})&\geq\frac{\log(x_1)+\ldots+\log(x_n)}{n}\\
+&=\frac{\log(x_1\cdot\ldots\cdot x_n)}{n}\\
+&=\log{\sqrt[n]{x_1\cdot\ldots\cdot x_n}}.
+\end{align*}
+Since $\log$ is also a monotone function, it follows that the arithmetic mean is at least as large as the geometric mean.
+
+The proof that the geometric mean is at least as large as the harmonic mean is the usual one (see ``proof of arithmetic-geometric-harmonic means inequality'').
+%%%%%
+%%%%%
+\end{document}

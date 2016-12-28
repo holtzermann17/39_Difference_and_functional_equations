@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DividedDifferencesOfPowers}
+\pmcreated{2013-03-22 16:47:59}
+\pmmodified{2013-03-22 16:47:59}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{divided differences of powers}
+\pmrecord{11}{39033}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39A70}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this entry, we will prove the claims about divided differences 
+of polynomials.  Because the divided difference is a linear
+operator, we can focus our attention on powers.  
+
+\begin{thm}
+If $f(x) = x^n$ and $m \le n$, then
+\[
+\Delta^m f [x_0, \cdots x_m] = 
+\sum_{k_0 + \cdots + k_m = n - m} x_0^{k_0} \cdots x_m^{k_m}.
+\]
+If $m > n$, then $\Delta^m f [x_0, \cdots x_m] = 0$.
+\end{thm}
+
+\begin{proof}
+We proceed by induction.  The formula is trivially true
+when $m = 0$.  Assume that the formula is true for a
+certain value of $m$.  Then we have
+\begin{align*}
+\Delta^{m+1} f [x_0, \cdots x_{m+1}] &= 
+{\Delta^m f [x_1, x_2 \cdots x_m] - \Delta^m f [x_0, x_2 \cdots x_m]
+ \over x_1 - x_0} \\ &=
+\sum_{k + k_2 + \cdots + k_m = n - m} 
+{(x_1^k - x_0^k) x_2^{k_2} \cdots x_m^{k_m}
+ \over x_1 - x_0}
+\end{align*}
+Using the identity for the sum of a geometric series,
+\[
+{x_1^k - x_0^k \over x_1 - x_0} =
+\sum_{k_0 + k_1 = k - 1} x_0^{k_0} x_1^{k_1},
+\]
+this becomes
+\begin{align*}
+\Delta^{m+1} f [x_0, \cdots x_{m+1}] &= 
+\sum_{k + k_2 + \cdots + k_m = n - m} \quad
+\sum_{k_0 + k_1 = k - 1} 
+x_0^{k_0} x_1^{k_1} x_2^{k_2} \cdots x_{m+1}^{k_{m+1}} \\ &=
+\sum_{k_0 + k_1 + k_2 + \cdots + k_m = n - (m + 1)}
+x_0^{k_0} x_1^{k_1} x_2^{k_2} \cdots x_{m+1}^{k_{m+1}}.
+\end{align*}
+Note that when $k=0$, we have $x_1^k - x_0^k = 0$, which
+is consistent with the formula given above because, in that
+case, there are no solutions to $k_1 + k_2 = k$, so the 
+sum is empty and, by convention, equals zero.  Likewise,
+when $n=m$, then the only solution to $k_0 + \cdots + k_m = 0$
+is $k_0 = \cdots = k_m = 0$, so the sum only consists of
+one term, $x_0^0 \cdots x_m^0 = 1$ so 
+$\Delta^n f [x_0, \cdots x_n] = 1$, hence taking
+further differences produces zero.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

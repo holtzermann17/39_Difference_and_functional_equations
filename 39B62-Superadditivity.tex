@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Superadditivity}
+\pmcreated{2013-03-22 13:52:25}
+\pmmodified{2013-03-22 13:52:25}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{superadditivity}
+\pmrecord{10}{34616}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{39B62}
+\pmsynonym{superadditive}{Superadditivity}
+\pmrelated{Subadditivity}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem*{lemma}{Lemma}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+A sequence $\{a_n\}_{n=1}^\infty$ is called \emph{superadditive} if
+it satisfies the inequality
+\begin{equation}\label{eqn:seq}
+a_{n+m}\geq a_n+a_m\qquad\text{for all $n$ and $m$}.
+\end{equation}
+The major reason for use of superadditive sequences is the following
+lemma due to Fekete.
+\begin{lemma}[\cite{cite:polya_szegoi}]
+For every superadditive sequence $\{a_n\}_{n=1}^\infty$ the limit
+$\lim a_n/n$ exists and is equal to $\sup a_n/n$.
+\end{lemma}
+
+Similarly, a function $f(x)$ is \emph{superadditive} if
+\begin{equation*}
+f(x+y)\geq f(x)+f(y)\qquad\text{for all $x$ and $y$}.
+\end{equation*}
+The analogue of Fekete lemma holds for superadditive functions as
+well.
+
+There are extensions of Fekete lemma that do not require \eqref{eqn:seq} to hold for all $m$ and $n$. There are also results that allow one to deduce the rate of convergence to the limit whose existence is stated in Fekete lemma if some kind of both super- and subadditivity is present. A good exposition of this topic may be found in \cite{cite:steele_azuma}.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:polya_szegoi}
+Gy{\"o}rgy Polya and G{\'a}bor Szeg{\"o}.
+\newblock {\em Problems and theorems in analysis}, volume~1.
+\newblock 1976.
+\newblock \PMlinkexternal{Zbl 0338.00001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0338.00001}.
+
+\bibitem{cite:steele_azuma}
+Michael~J. Steele.
+\newblock {\em Probability theory and combinatorial optimization}, volume~69 of
+  {\em CBMS-NSF Regional Conference Series in Applied Mathematics}.
+\newblock SIAM, 1997.
+\newblock \PMlinkexternal{Zbl 0916.90233}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0916.90233}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
