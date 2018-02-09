@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<title>indefinite sum</title>
+<!--Generated on Fri Feb  9 20:48:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">indefinite sum</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Recall that the finite difference operator <math id="p1.m1" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> defined on the set of functions <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}\to\mathbb{R}" display="inline"><mrow><mi>ℝ</mi><mo>→</mo><mi>ℝ</mi></mrow></math> is given by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Delta f(x):=f(x+1)-f(x)." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The difference operator can be thought of as the discrete version of the derivative operator sending a function to its derivative (if it exists). With the derivative operation, there corresponds an inverse operation called the antiderivative, which, given a function <math id="p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, finds its antiderivative <math id="p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> so that the derivative of <math id="p1.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> gives <math id="p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. There is also a discrete analog of this inverse operation, and it is called the <em class="ltx_emph ltx_font_italic">indefinite sum</em>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">indefinite sum</em> of a function <math id="p2.m1" class="ltx_Math" alttext="f:\mathbb{R}\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is the set of functions</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\{F:\mathbb{R}\to\mathbb{R}\mid\Delta F=f\}." display="block"><mrow><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>:</mo><mi>ℝ</mi><mo>→</mo><mi>ℝ</mi><mo>∣</mo><mi mathvariant="normal">Δ</mi><mi>F</mi><mo>=</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This set is often denoted by <math id="p2.m2" class="ltx_Math" alttext="\Delta^{-1}f" display="inline"><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></math> or <math id="p2.m3" class="ltx_Math" alttext="\Sigma f" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>f</mi></mrow></math>, and any element in <math id="p2.m4" class="ltx_Math" alttext="\Delta^{-1}f" display="inline"><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></math> is called an indefinite sum of <math id="p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. Like the indefinite integral, the indefinite sum <math id="p3.m1" class="ltx_Math" alttext="\Delta^{-1}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> is shift invariant. This means that for any <math id="p3.m2" class="ltx_Math" alttext="F\in\Delta^{-1}f" display="inline"><mrow><mi>F</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, then <math id="p3.m3" class="ltx_Math" alttext="F+c\in\Delta^{-1}f" display="inline"><mrow><mrow><mi>F</mi><mo>+</mo><mi>c</mi></mrow><mo>∈</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></mrow></math> for any <math id="p3.m4" class="ltx_Math" alttext="c\in\mathbb{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. But, unlike the indefinite integral, the indefinite sum is also invariant by a shift of a periodic real function of period <math id="p3.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. Conversely, the difference of two indefinite sums of a function <math id="p3.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a periodic real function of period <math id="p3.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the following discussion, we consider the indefinite sum of a function as a function.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Basic Properties</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\Delta\Delta^{-1}f=f" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mi>f</mi></mrow></math>, and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\Delta^{-1}\Delta f=f" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mi>f</mi></mrow></math> modulo a real function of period <math id="I1.i1.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Modulo a real number, and treating <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\Delta^{-1}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> as an operator taking a function into a function, we see that <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\Delta^{-1}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> is linear, that is,</p>
+<ul id="I1.I1" class="ltx_itemize">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="\Delta^{-1}(rf)=r\Delta^{-1}f" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></mrow></math> for any <math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="r\in\mathbb{R}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="\Delta^{-1}(f+g)=\Delta^{-1}f+\Delta^{-1}g" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo>+</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p1.m1" class="ltx_Math" alttext="F(x)=\Delta^{-1}f(x)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I1.i3.p1.m2" class="ltx_Math" alttext="F(x+a)=\Delta^{-1}f(x+a)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i4.p1.m1" class="ltx_Math" alttext="F=\Delta^{-1}f" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, then we see that</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle F(a+1)-F(a)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle f(a)," display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle F(a+2)-F(a+1)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle f(a+1)," display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle F(x)-F(x-1)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle f(x-1)." display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i4.p1.m2" class="ltx_Math" alttext="x-a" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow></math> is a positive integer. Summing these expressions, we get</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="F(x)-F(a)=\sum_{i=1}^{x-a}f(a+i-1)." display="block"><mrow><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow></munderover><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>+</mo><mi>i</mi></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is the discrete version of the fundamental theorem of calculus.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Below is a table of some basic functions and their indefinite sums (<math id="p6.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a real-valued periodic function with period <math id="p6.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>):</p>
+</div>
+<div id="p7" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="p7.m2" class="ltx_Math" alttext="\Delta^{-1}f(x)" display="inline"><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">Comment</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_tt"><math id="p7.m3" class="ltx_Math" alttext="r\in\mathbb{R}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_tt"><math id="p7.m4" class="ltx_Math" alttext="rx+C" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_tt"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m6" class="ltx_Math" alttext="\displaystyle{\frac{x(x-1)}{2}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m7" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m8" class="ltx_Math" alttext="\displaystyle{\frac{x(x-1)(2x-1)}{6}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>6</mn></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m9" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m10" class="ltx_Math" alttext="\displaystyle{\frac{x^{2}(x-1)^{2}}{4}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mn>4</mn></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m11" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m12" class="ltx_Math" alttext="T_{n}(x)+C" display="inline"><mrow><mrow><msub><mi>T</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">See this link (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SumOfPowers</span>) for detail</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m13" class="ltx_Math" alttext="a^{x}" display="inline"><msup><mi>a</mi><mi>x</mi></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m14" class="ltx_Math" alttext="\displaystyle{\frac{a^{x}}{a-1}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msup><mi>a</mi><mi>x</mi></msup><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m15" class="ltx_Math" alttext="a\neq 1" display="inline"><mrow><mi>a</mi><mo>≠</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m16" class="ltx_Math" alttext="(x)_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m17" class="ltx_Math" alttext="\displaystyle{\frac{(x)_{n}}{n+1}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<math id="p7.m18" class="ltx_Math" alttext="(x)_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is the falling factorial of degree <math id="p7.m19" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m20" class="ltx_Math" alttext="\displaystyle{\binom{x}{n}}" display="inline"><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>x</mi><mi>n</mi></mfrac></mstyle><mo>)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m21" class="ltx_Math" alttext="\displaystyle{\binom{x}{n+1}+C}" display="inline"><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>)</mo></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m22" class="ltx_Math" alttext="\displaystyle{\binom{x}{n}:=\frac{(x)_{n}}{n!}}" display="inline"><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>x</mi><mi>n</mi></mfrac></mstyle><mo>)</mo></mrow><mo>:=</mo><mstyle displaystyle="true"><mfrac><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m23" class="ltx_Math" alttext="\displaystyle{\frac{1}{x}}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m24" class="ltx_Math" alttext="\psi(x)+C" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<math id="p7.m25" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the digamma function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m26" class="ltx_Math" alttext="\ln{x}" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m27" class="ltx_Math" alttext="\ln{\Gamma(x)}+C" display="inline"><mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">
+<math id="p7.m28" class="ltx_Math" alttext="\Gamma(x)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the gamma function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m29" class="ltx_Math" alttext="\sin{x}" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="p7.m30" class="ltx_Math" alttext="\displaystyle{-\frac{\cos(x-1/2)}{2\sin(1/2)}+C}" display="inline"><mrow><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="p7.m31" class="ltx_Math" alttext="\cos{x}" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><math id="p7.m32" class="ltx_Math" alttext="\displaystyle{\frac{\sin(x-1/2)}{2\sin(1/2)}+C}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_td ltx_border_b ltx_border_r ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"><math id="p7.m33" class="ltx_Math" alttext="{{{{}\end{center}\inner@par\thebibliography\bibitem{cj}C.Jordan.\emph{Calculus of %
+Finite Differences},thirdedition.Chelsea,NewYork(1965)\endthebibliography%
+\begin{flushright}\begin{tabular}[]{|ll|}\hline Title&amp;indefinite sum\\
+Canonical name&amp;IndefiniteSum\\
+Date of creation&amp;2013-03-22 17:35:14\\
+Last modified on&amp;2013-03-22 17:35:14\\
+Owner&amp;CWoo (3771)\\
+Last modified by&amp;CWoo (3771)\\
+Numerical id&amp;20\\
+Author&amp;CWoo (3771)\\
+Entry type&amp;Definition\\
+Classification&amp;msc 39A99\\
+Related topic&amp;FiniteDifference\\
+\hline}\end{tabular}}$}\end{flushright}\end{document}" display="inline"><mrow><mrow><mtext> References
+                  
+                    
+                      1 </mtext><mo>⁢</mo><mi>C</mi></mrow><mo>.</mo><mrow><mi>J</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>n</mi></mrow><mo>.</mo><mrow><mtext mathvariant="italic"><em class="ltx_emph ltx_font_italic">Calculus of Finite Differences</em></mtext><mo>,</mo><mrow><mi>t</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>.</mo><mrow><mrow><mi>C</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo>,</mo><mrow><mi>N</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1965</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtable class="ltx_align_right ltx_guessed_headers" columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_border_l ltx_border_t ltx_th_row" columnalign="left"><mtext>Title</mtext></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="left"><mtext>indefinite sum</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Canonical name</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>IndefiniteSum</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Date of creation</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>2013-03-22 17:35:14</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Last modified on</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>2013-03-22 17:35:14</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Owner</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>CWoo (3771)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Last modified by</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>CWoo (3771)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Numerical id</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>20</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Author</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>CWoo (3771)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Entry type</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>Definition</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Classification</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>msc 39A99</mtext></mtd></mtr><mtr><mtd class="ltx_border_b ltx_border_l ltx_th_row" columnalign="left"><mtext>Related topic</mtext></mtd><mtd class="ltx_border_b ltx_border_r" columnalign="left"><mtext>FiniteDifference</mtext></mtd></mtr></mtable></mrow></mrow></mrow></math></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:48:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
