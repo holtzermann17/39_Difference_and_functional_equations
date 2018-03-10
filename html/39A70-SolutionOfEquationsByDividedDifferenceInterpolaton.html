@@ -19,17 +19,17 @@
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
 <p class="ltx_p">Divided diference interpolation can be used to obtain approximate
-solutions to equations and to invert functions numerically. The
+solutions to equations and to invert <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">functions</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Function.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/function"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> numerically. The
 idea is that, given an equation <math id="p1.m1" class="ltx_Math" alttext="f(y)=x" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> which we want to solve
 for <math id="p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, we first take several numbers <math id="p1.m3" class="ltx_Math" alttext="y_{1},\ldots,y_{n}" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></math> and
 compute <math id="p1.m4" class="ltx_Math" alttext="x_{1}\ldots x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math> as <math id="p1.m5" class="ltx_Math" alttext="x_{i}=f(y_{i})" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then we compute the
-divided differences of the <math id="p1.m6" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math>’s regarded as functions of the
+<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">divided differences</a><sup style="display: none;"><a class="nnexus_concept" href="http://dlmf.nist.gov/3.3#SS3.p1"><img src="http://dlmf.nist.gov/style/DLMF-16.png" alt="Dlmf"></img></a><a class="nnexus_concept" href="http://mathworld.wolfram.com/DividedDifference.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/divideddifference"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of the <math id="p1.m6" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math>’s regarded as functions of the
 <math id="p1.m7" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math>’s and form the divided difference series. Substituting
 <math id="p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in this series provides an approximation to <math id="p1.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">To illustrate how this works, we will examine the transcendental
-equation <math id="p2.m1" class="ltx_Math" alttext="x+e^{-x}=2" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>=</mo><mn>2</mn></mrow></math>. We note that <math id="p2.m2" class="ltx_Math" alttext="2+e^{-2}=2.13533" display="inline"><mrow><mrow><mn>2</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>=</mo><mn>2.13533</mn></mrow></math>
+<p class="ltx_p">To illustrate how this works, we will examine the <a class="nnexus_concept" href="http://mathworld.wolfram.com/TranscendentalEquation.html">transcendental
+equation</a> <math id="p2.m1" class="ltx_Math" alttext="x+e^{-x}=2" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>=</mo><mn>2</mn></mrow></math>. We note that <math id="p2.m2" class="ltx_Math" alttext="2+e^{-2}=2.13533" display="inline"><mrow><mrow><mn>2</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>=</mo><mn>2.13533</mn></mrow></math>
 and <math id="p2.m3" class="ltx_Math" alttext="1.5+e^{-1.5}=1.72313" display="inline"><mrow><mrow><mn>1.5</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>1.5</mn></mrow></msup></mrow><mo>=</mo><mn>1.72313</mn></mrow></math>, so there will be a solution
 between <math id="p2.m4" class="ltx_Math" alttext="1.5" display="inline"><mn>1.5</mn></math> and <math id="p2.m5" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, likely closer to <math id="p2.m6" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> than <math id="p2.m7" class="ltx_Math" alttext="1.5" display="inline"><mn>1.5</mn></math>. Therefore,
 as our values of the <math id="p2.m8" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math>’s, we shall take <math id="p2.m9" class="ltx_Math" alttext="1.5" display="inline"><mn>1.5</mn></math>, <math id="p2.m10" class="ltx_Math" alttext="1.6" display="inline"><mn>1.6</mn></math>, <math id="p2.m11" class="ltx_Math" alttext="1.7" display="inline"><mn>1.7</mn></math>,
@@ -75,7 +75,7 @@ for those values:</p>
 </table>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">Next, we form a divided difference table of the <math id="p4.m1" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math>’s as a
+<p class="ltx_p">Next, we form a <a class="nnexus_concept" href="http://planetmath.org/divideddifferencetable">divided difference table</a> of the <math id="p4.m1" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math>’s as a
 function of the <math id="p4.m2" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math>’s:</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
@@ -147,12 +147,12 @@ function of the <math id="p4.m2" class="ltx_Math" alttext="x_{i}" display="inlin
 <div id="p5" class="ltx_para">
 <p class="ltx_p">In the presentation above, we tacitly assumed that there was a
 solution to our equation and focussed our attention on finding
-that answer numerically. To complete the treatment we will
+that answer numerically. To <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">complete</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/soundcomplete"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/kripkesemantics"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/maximallyconsistent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> the treatment we will
 now show that there indeed exists a unique solution to the
-equation <math id="p5.m1" class="ltx_Math" alttext="x+e^{-x}=2" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>=</mo><mn>2</mn></mrow></math> in the interval <math id="p5.m2" class="ltx_Math" alttext="(0,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+equation <math id="p5.m1" class="ltx_Math" alttext="x+e^{-x}=2" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>=</mo><mn>2</mn></mrow></math> in the <a class="nnexus_concept" href="http://planetmath.org/interval">interval</a> <math id="p5.m2" class="ltx_Math" alttext="(0,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>.</p>
 </div>
 <div id="p6" class="ltx_para">
-<p class="ltx_p">Existence follows from the intermediate value theorem. As
+<p class="ltx_p"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Existence.html">Existence</a> follows from the <a class="nnexus_concept" href="http://planetmath.org/intermediatevaluetheorem">intermediate value theorem</a>. As
 noted above,</p>
 <table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
 
@@ -166,7 +166,7 @@ noted above,</p>
 that there exists <math id="p6.m3" class="ltx_Math" alttext="x\in(1.5,2)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>1.5</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="p6.m4" class="ltx_Math" alttext="x+e^{-x}=2" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>=</mo><mn>2</mn></mrow></math>.</p>
 </div>
 <div id="p7" class="ltx_para">
-<p class="ltx_p">As for uniqueness, note that the derivative of <math id="p7.m1" class="ltx_Math" alttext="x+e^{-x}" display="inline"><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></math>
+<p class="ltx_p">As for uniqueness, note that the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">derivative</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/fixedpointsofnormalfunctions"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/derivative"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of <math id="p7.m1" class="ltx_Math" alttext="x+e^{-x}" display="inline"><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></math>
 is <math id="p7.m2" class="ltx_Math" alttext="1-e^{-x}" display="inline"><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></math>. When <math id="p7.m3" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we have <math id="p7.m4" class="ltx_Math" alttext="e^{-x}&lt;1" display="inline"><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>&lt;</mo><mn>1</mn></mrow></math>, or
 <math id="p7.m5" class="ltx_Math" alttext="1-e^{-x}&gt;0" display="inline"><mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Hence, <math id="p7.m6" class="ltx_Math" alttext="x+e^{-x}" display="inline"><mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></math> is a strictly increaing
 function of <math id="p7.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, so there can be at most one <math id="p7.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that
@@ -177,7 +177,7 @@ function of <math id="p7.m7" class="ltx_Math" alttext="x" display="inline"><mi>x
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">solution of equations by divided difference interpolaton</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/solutionofequationsbydivideddifferenceinterpolaton">solution of equations by divided difference interpolaton</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
